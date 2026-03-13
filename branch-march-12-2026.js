@@ -6,6 +6,18 @@ const s1 = {
   limit: 2,
   selected: false,
   limit_reached: false,
+  get items() {
+    return [
+      this.item1,
+      this.item2,
+      this.item3,
+      this.item4,
+      this.item5,
+      this.item6,
+      this.item7,
+      this.item8,
+    ];
+  },
   title: document.querySelector("#s1-title"),
   choose: document.querySelector("#s1-choose-amount"),
   // counter : document.querySelector('#s1c'),
@@ -56,3 +68,31 @@ function disable_all_unselected_item_buttons() {
     }
   });
 }
+
+//disable_all_unselected_item_buttons();
+
+/*
+const s1 = {
+  name: "Proteins",
+  // ... other properties ...
+
+  // 1. Move the array inside as a property
+  get items() {
+    return [this.item1, this.item2, this.item3];
+  },
+
+  // 2. Move the function inside as a method
+  disableUnselected() {
+    this.items.forEach((item) => {
+      if (!item.selected) {
+        item.button.disabled = true;
+      }
+    });
+  },
+  
+  // ... items ...
+};
+
+// To use it now:
+s1.disableUnselected();
+*/

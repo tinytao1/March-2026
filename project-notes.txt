@@ -1,5 +1,8 @@
   items: [], // [ this.item1, this.item2, this.item3, this.item4, this.item5, this.item6, this.item7, this.item8, ],
-
+//  LIST ALL ITEMS HERE IN THIS "GET" PROPERTY:
+  get items() {
+    return [this.item1, this.item2, this.item3, this.item4, this.item5, this.item6, this.item7, this.item8, ];
+  },
 what does s1.items.push(item1) do?
 
 /*

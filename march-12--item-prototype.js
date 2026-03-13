@@ -4,7 +4,7 @@ const s1_Item_Methods = {
     this.button.addEventListener("click", () => this.select());
   },
 
-  increase_item_count() {
+  increase_item_count_by_1() {
     this.count++;
   },
   decrease_item_count() {
@@ -75,36 +75,45 @@ const s1_Item_Methods = {
     s1.limit_reached = false;
   },
 
-  /*
-  if_section_count_limit_is_reached_then_drop_item() {
-    if (s1.count == s1.limit) {
-      this.set_section_limit_reached_true();
-    }
-  }, */
+  disable_all_unselected_item_buttons() {
+    s1.items.forEach((item) => {
+      if (!item.selected) {
+        item.button.disabled = true;
+      }
+    });
+  },
+
+  enable_all_unselected_item_buttons() {
+    s1.items.forEach((item) => {
+      if (!item.selected) {
+        item.button.disabled = false;
+      }
+    });
+  },
 
   select_from_zero() {
-    this.increase_item_count();
+    this.increase_item_count_by_1();
     this.set_item_selected_to_true();
     this.increase_section_count();
     this.set_section_selected_to_true();
     this.display_item_count();
-    // If section limit is reached then set limit reached true
+    // STEP If section limit is reached then set limit reached true
     if (s1.count == s1.limit) {
       this.set_section_limit_reached_true();
-      this.set_disable_all_unselected_item_buttons();
+      this.disable_all_unselected_item_buttons();
     }
-    //XX this.if_section_count_limit_is_reached_then_drop_item();
     this.log_combined_section_and_item_status();
   },
 
   select() {
-    // Begin at: If section limit is already reached, then drop item from count.
+    /* Begin with the possibility that the section limit has already been reached, 
+         so the selected item needs to be dropped from the section count. */
     if (s1.count == s1.limit) {
       this.subtract_item_count_from_section_count();
       this.set_section_limit_reached_false();
-      // set_all_unselected_item_buttons_to_disabled();
+      this.enable_all_unselected_item_buttons();
 
-      // STEP -If section count is now 0, then set selected false.
+      /* STEP -If SECTION COUNT is now 0, then set SECTION selected:false. */
       if (s1.count == 0) {
         this.set_section_selected_to_false();
       }
@@ -115,7 +124,6 @@ const s1_Item_Methods = {
       this.select_from_zero();
     }
   },
-
-  disable_all_unselected_item_buttons() {},
-  enable_all_item_buttons() {},
 };
+
+////////////// BEGIN RESET METHODS  /////////////////////////////////////
