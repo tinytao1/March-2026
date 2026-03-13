@@ -1,3 +1,6 @@
+  items: [], // [ this.item1, this.item2, this.item3, this.item4, this.item5, this.item6, this.item7, this.item8, ],
+
+what does s1.items.push(item1) do?
 
 /*
 Object.setPrototypeOf(item1, section_methods_collection);
