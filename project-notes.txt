@@ -5,6 +5,48 @@
   },
 what does s1.items.push(item1) do?
 
+
+const s1_items = [s1.item1, s1.item2, s1.item3];
+
+function disable_all_unselected_item_buttons() {
+  s1_items.forEach((item) => {
+    if (!item.selected) {
+      item.button.disabled = true;
+    }
+  });
+}
+
+OR
+
+
+//disable_all_unselected_item_buttons();
+
+/*
+const s1 = {
+  name: "Proteins",
+  // ... other properties ...
+
+  // 1. Move the array inside as a property
+  get items() {
+    return [this.item1, this.item2, this.item3];
+  },
+
+  // 2. Move the function inside as a method
+  disableUnselected() {
+    this.items.forEach((item) => {
+      if (!item.selected) {
+        item.button.disabled = true;
+      }
+    });
+  },
+  
+  // ... items ...
+};
+
+// To use it now:
+s1.disableUnselected();
+*/
+
 /*
 Object.setPrototypeOf(item1, section_methods_collection);
 Object.setPrototypeOf(item2, section_methods_collection);

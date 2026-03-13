@@ -1,4 +1,8 @@
 const s1_Item_Methods = {
+  get section() {
+    return s1;
+  },
+
   init() {
     // call to activate >> item#.init();
     this.button.addEventListener("click", () => this.select());
@@ -76,7 +80,7 @@ const s1_Item_Methods = {
   },
 
   disable_all_unselected_item_buttons() {
-    s1.items.forEach((item) => {
+    this.section.items.forEach((item) => {
       if (!item.selected) {
         item.button.disabled = true;
       }
@@ -84,7 +88,7 @@ const s1_Item_Methods = {
   },
 
   enable_all_unselected_item_buttons() {
-    s1.items.forEach((item) => {
+    this.section.items.forEach((item) => {
       if (!item.selected) {
         item.button.disabled = false;
       }
