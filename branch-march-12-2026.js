@@ -1,23 +1,13 @@
 "use strict";
 
 const s1 = {
+  __proto__: s1_Section_Methods,
   name: "Proteins",
   count: 0,
   limit: 2,
   selected: false,
   limit_reached: false,
-  get items() {
-    return [
-      this.item1,
-      this.item2,
-      this.item3,
-      this.item4,
-      this.item5,
-      this.item6,
-      this.item7,
-      this.item8,
-    ];
-  },
+
   title: document.querySelector("#s1-title"),
   choose: document.querySelector("#s1-choose-amount"),
   // counter : document.querySelector('#s1c'),
