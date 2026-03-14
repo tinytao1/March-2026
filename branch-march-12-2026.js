@@ -101,40 +101,54 @@ const s1 = {
   },
 };
 
+const s2 = {
+  __proto__: s2_Section_Methods,
+  name: "Eggs",
+  count: 0,
+  limit: 1,
+  selected: false,
+  limit_reached: false,
+
+  title: document.querySelector("#s2-title"),
+  choose: document.querySelector("#s2-choose-amount"),
+  // counter : document.querySelector('#sc'),
+
+  item1: {
+    __proto__: s2_Item_Methods,
+    name: "6 Raw Eggs",
+    count: 0,
+    limit: 1,
+    selected: false,
+    limit_reached: false,
+    button: document.querySelector("#s2-1"),
+    counter: document.querySelector("#s2-1c"),
+  },
+};
+
 /*
 "use strict";
 
-const s1 = {
-  name: 'Proteins',
+const s = {
+  __proto__: s_Section_Methods,
+  name: 'name',
   count: 0,
-  limit: 2,
+  limit: null,
   selected: false,
   limit_reached: false,
-  get items() {
-    return [
-      this.item1,
-      this.item2,
-      this.item3,
-      //this.item4,
-      //this.item5,
-      //this.item6,
-      //this.item7,
-      //this.item8,
-    ];
-  },
-  title: document.querySelector("#s1-title"),
-  choose: document.querySelector("#s1-choose-amount"),
-  // counter : document.querySelector('#s1c'),
+  
+  title: document.querySelector("#s-title"),
+  choose: document.querySelector("#s-choose-amount"),
+  // counter : document.querySelector('#sc'),
 
-  item: {
-    __proto__: s1_Item_Methods,
-    name: '',
+  item1: {
+    __proto__: s_Item_Methods,
+    name: 'null',
     count: 0,
     limit: null,
     selected: false,
     limit_reached: false,
-    button: document.querySelector("#s1-"),
-    counter: document.querySelector("#s1-c"),
+    button: document.querySelector("#s-"),
+    counter: document.querySelector("#s-c"),
   },
 
 

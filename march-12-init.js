@@ -19,4 +19,14 @@ s1.item6.init();
 s1.item7.init();
 s1.item8.init();
 
-// reset_s1.button.innerHTML = reset_s1.name;
+s2.item1.init();
+s2.title.innerHTML = s2.name;
+s2.choose.innerHTML = s2.limit;
+s2.item1.button.innerHTML = s2.item1.name;
+
+/*
+s.item1.init();
+s.title.innerHTML = s.name;
+s.choose.innerHTML = s.limit;
+s.item1.button.innerHTML = s.item1.name;
+*/
