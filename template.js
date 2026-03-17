@@ -32,16 +32,16 @@
 "use strict";
 
 const s = {
-  __proto__: section_Methods,
-  name: "null",
+  name: null,
   count: 0,
-  limit: null,
+  limit: false,
   selected: false,
   limit_reached: false,
 
   title: document.querySelector("#s-title"),
   choose: document.querySelector("#s-choose-amount"),
   // counter : document.querySelector('#s1c'),
+  __proto__: section_Methods,
   get items() {
     return [
       this.item1,
@@ -56,15 +56,15 @@ const s = {
   },
 
   item: {
-    __proto__: item_Methods,
-    name: "null",
+    name: null,
     count: 0,
-    limit: null,
+    limit: false,
     selected: false,
     limit_reached: false,
     button: document.querySelector("#s-"),
     counter: document.querySelector("#s-c"),
-    get section() {
+     __proto__: item_Methods,
+   get section() {
       return s;
     },
   },

@@ -96,13 +96,59 @@ const item_Methods = {
     });
   },
 
+  if_this_is_cheese_then_disable_other_cheeses() {
+    if (this.is_cheese) {
+      this.section.items.forEach((item) => {
+        if (!item.selected && item.is_cheese) {
+          item.button.disabled = true;
+        }
+      });
+    }
+  },
+
+  if_this_is_cheese_then_undo_disable_other_cheeses() {
+    if (this.is_cheese) {
+      this.section.items.forEach((item) => {
+        if (!item.selected && item.is_cheese) {
+          item.button.disabled = false;
+        }
+      });
+    }
+  },
+
+  drop_item_from_section_count() {
+    this.section.count = this.section.count - this.count;
+  },
+
+  set_item_limit_reached_to_true() {
+    this.limit_reached = true;
+  },
+
+  set_item_limit_reached_to_false() {
+    this.limit_reached = false;
+  },
+
+  if_item_limit_reached_is_true_then_drop_item() {
+    if (this.item.limit_reached) {
+      this.drop_item_from_section_count();
+      this.set_item_limit_reached_to_false();
+      this.set_item_count_to_zero();
+      this.set_item_selected_to_false();
+      this.set_section_limit_reached_false();
+      this.remove_display_item_count();
+      this.if_this_is_cheese_then_undo_disable_other_cheeses();
+    }
+  },
+
   select_from_zero() {
     this.increase_item_count_by_1();
     this.set_item_selected_to_true();
     this.increase_section_count();
     this.set_section_selected_to_true();
     this.display_item_count();
-    // STEP If section limit is reached then set limit reached true
+    this.if_this_is_cheese_then_disable_other_cheeses();
+    // STEP If section limit is reached
+    //  then set limit reached true
     if (this.section.count == this.section.limit) {
       this.set_section_limit_reached_true();
       this.disable_all_unselected_item_buttons();
@@ -113,6 +159,7 @@ const item_Methods = {
   select() {
     /* Begin with the possibility that the section limit has already been reached, 
          so the selected item needs to be dropped from the section count. */
+    this.if_item_limit_reached_is_true();
     if (this.section.count == this.section.limit) {
       this.subtract_item_count_from_section_count();
       this.set_section_limit_reached_false();
@@ -129,16 +176,5 @@ const item_Methods = {
     } else {
       this.select_from_zero();
     }
-  },
-};
-
-s1_items_proto = {
-  __proto__: item_Methods,
-};
-
-s2_items_proto = {
-  __proto__: item_Methods,
-  get section() {
-    return s2;
   },
 };

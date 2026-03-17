@@ -1,5 +1,16 @@
 "use strict";
 
+s1_items_proto = {
+  __proto__: item_Methods,
+};
+
+s2_items_proto = {
+  __proto__: item_Methods,
+  get section() {
+    return s2;
+  },
+};
+
 const itemMethods = {
   init() {
     // call to activate >> item#.init();
