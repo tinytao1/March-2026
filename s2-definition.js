@@ -1,5 +1,5 @@
 const s2 = {
-  __proto__: s2_section_proto,
+  __proto__: section_Methods,
   name: "Eggs",
   count: 0,
   limit: 1,
@@ -9,6 +9,9 @@ const s2 = {
   title: document.querySelector("#s2-title"),
   choose: document.querySelector("#s2-choose-amount"),
   // counter : document.querySelector('#sc'),
+  get items() {
+    return [this.item1];
+  },
 
   item1: {
     __proto__: item_Methods,

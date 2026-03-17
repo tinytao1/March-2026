@@ -1,7 +1,7 @@
 "use strict";
 
 const s1 = {
-  __proto__: s1_section_proto,
+  __proto__: section_Methods,
   name: "Proteins",
   count: 0,
   limit: 2,
@@ -11,9 +11,21 @@ const s1 = {
   title: document.querySelector("#s1-title"),
   choose: document.querySelector("#s1-choose-amount"),
   // counter : document.querySelector('#s1c'),
+  get items() {
+    return [
+      this.item1,
+      this.item2,
+      this.item3,
+      this.item4,
+      this.item5,
+      this.item6,
+      this.item7,
+      this.item8,
+    ];
+  },
 
   item1: {
-    __proto__: s1_items_proto,
+    __proto__: item_Methods,
     name: "Tilapia",
     count: 0,
     limit: null,
@@ -24,7 +36,7 @@ const s1 = {
   },
 
   item2: {
-    __proto__: s1_items_proto,
+    __proto__: item_Methods,
     name: "Chicken Breast",
     count: 0,
     limit: null,
@@ -46,7 +58,7 @@ const s1 = {
   },
 
   item4: {
-    __proto__: s1_items_proto,
+    __proto__: item_Methods,
     name: "Tempeh",
     count: 0,
     limit: null,
@@ -57,7 +69,7 @@ const s1 = {
   },
 
   item5: {
-    __proto__: s1_items_proto,
+    __proto__: item_Methods,
     name: "Tuna",
     count: 0,
     limit: null,
@@ -68,7 +80,7 @@ const s1 = {
   },
 
   item6: {
-    __proto__: s1_items_proto,
+    __proto__: item_Methods,
     name: "Protein Trail Mix",
     count: 0,
     limit: null,
@@ -79,7 +91,7 @@ const s1 = {
   },
 
   item7: {
-    __proto__: s1_items_proto,
+    __proto__: item_Methods,
     name: "Firm Tofu",
     count: 0,
     limit: null,
@@ -90,7 +102,7 @@ const s1 = {
   },
 
   item8: {
-    __proto__: s1_items_proto,
+    __proto__: item_Methods,
     name: "Tempeh Cauliflower Patty",
     count: 0,
     limit: null,

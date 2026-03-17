@@ -1,6 +1,7 @@
 const section_Methods = {
   set_section_count_to_zero() {
     this.count = 0;
+    this.log_section_status();
   },
 
   log_section_status() {
@@ -58,26 +59,13 @@ const section_Methods = {
     this.log_section_status();
   },
 };
-
+/*
 const s1_section_proto = {
   __proto__: section_Methods,
-  get items() {
-    return [
-      this.item1,
-      this.item2,
-      this.item3,
-      this.item4,
-      this.item5,
-      this.item6,
-      this.item7,
-      this.item8,
-    ];
-  },
+  
 };
 
 const s2_section_proto = {
   __proto__: section_Methods,
-  get items() {
-    return [this.item1];
-  },
-};
+  
+}; */
