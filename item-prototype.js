@@ -1,7 +1,4 @@
 const item_Methods = {
-  get section() {
-    return s1;
-  },
   init() {
     // call to activate >> item#.init();
     this.button.addEventListener("click", () => this.select());

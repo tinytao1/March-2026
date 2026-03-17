@@ -26,9 +26,38 @@ s2.choose.innerHTML = s2.limit;
 
 s2.item1.button.innerHTML = s2.item1.name;
 
+s3.item1.init();
+s3.item2.init();
+s3.item3.init();
+s3.item4.init();
+s3.item5.init();
+s3.item6.init();
+s3.item7.init();
+s3.item8.init();
+s3.item9.init();
+s3.item10.init();
+
+s3.title.innerHTML = s3.name;
+s3.choose.innerHTML = s3.limit;
+
+s3.item1.button.innerHTML = s3.item1.name;
+s3.item2.button.innerHTML = s3.item2.name;
+s3.item3.button.innerHTML = s3.item3.name;
+s3.item4.button.innerHTML = s3.item4.name;
+s3.item5.button.innerHTML = s3.item5.name;
+s3.item6.button.innerHTML = s3.item6.name;
+s3.item7.button.innerHTML = s3.item7.name;
+s3.item8.button.innerHTML = s3.item8.name;
+s3.item9.button.innerHTML = s3.item9.name;
+s3.item10.button.innerHTML = s3.item10.name;
+
 /*
-s.item1.init();
+
+s.item.init();
+
 s.title.innerHTML = s.name;
 s.choose.innerHTML = s.limit;
-s.item1.button.innerHTML = s.item1.name;
+
+s.item.button.innerHTML = s.item.name;
+
 */

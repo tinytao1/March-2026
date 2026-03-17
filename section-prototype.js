@@ -1,7 +1,6 @@
 const section_Methods = {
   set_section_count_to_zero() {
     this.count = 0;
-    this.log_section_status();
   },
 
   log_section_status() {
@@ -46,6 +45,12 @@ const section_Methods = {
     });
   },
 
+  remove_display_all_item_counts() {
+    this.items.forEach((item) => {
+      item.counter.style.display = "none";
+    });
+  },
+
   section_reset() {
     this.set_section_count_to_zero();
     this.set_section_selected_to_false();
@@ -53,19 +58,40 @@ const section_Methods = {
     this.set_all_item_counts_to_zero();
     this.set_all_item_selecteds_to_false();
     this.enable_all_item_buttons();
-    this.display_all_item_counts();
-
+    this.remove_display_all_item_counts();
     this.log_all_items_status();
     this.log_section_status();
   },
 };
-/*
-const s1_section_proto = {
-  __proto__: section_Methods,
-  
-};
 
-const s2_section_proto = {
-  __proto__: section_Methods,
-  
-}; */
+/* HTML SECTION TEMPLATE
+
+    <!-- START SECTION  -->
+
+    <div class="section" id="s-section-div">
+
+      <div class="section-header" id="s-header">
+        <!-- START SECTION  HEADER -->
+
+        <h2 class="section-title" id="s-title">section title</h2>
+        <!-- <span class="section-counter" id="sc"> 0 </span> -->
+
+        <span
+          >(choose
+          <span class="choose-amount" id="s-choose-amount"> 0 </span>
+          )</span
+        >
+      </div>
+      <!-- END SECTION  HEADER -->
+
+      <div class="item-div">
+        <button id="s-" class="item-btn inactive-btn">item</button>
+        <span id="s-c" class="counter inactive-counter">0</span>
+      </div>
+
+        <!--
+// SECTION  /////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+// SECTION  /////////////////////////////////////////////////////////////////////////////////////
+-->
+*/

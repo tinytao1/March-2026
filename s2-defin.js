@@ -22,5 +22,8 @@ const s2 = {
     limit_reached: false,
     button: document.querySelector("#s2-1"),
     counter: document.querySelector("#s2-1c"),
+    get section() {
+      return s2;
+    },
   },
 };

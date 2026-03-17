@@ -33,6 +33,9 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-1"),
     counter: document.querySelector("#s1-1c"),
+    get section() {
+      return s1;
+    },
   },
 
   item2: {
@@ -44,6 +47,9 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-2"),
     counter: document.querySelector("#s1-2c"),
+    get section() {
+      return s1;
+    },
   },
 
   item3: {
@@ -55,6 +61,9 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-3"),
     counter: document.querySelector("#s1-3c"),
+    get section() {
+      return s1;
+    },
   },
 
   item4: {
@@ -66,6 +75,9 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-4"),
     counter: document.querySelector("#s1-4c"),
+    get section() {
+      return s1;
+    },
   },
 
   item5: {
@@ -77,6 +89,9 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-5"),
     counter: document.querySelector("#s1-5c"),
+    get section() {
+      return s1;
+    },
   },
 
   item6: {
@@ -88,6 +103,9 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-6"),
     counter: document.querySelector("#s1-6c"),
+    get section() {
+      return s1;
+    },
   },
 
   item7: {
@@ -99,6 +117,9 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-7"),
     counter: document.querySelector("#s1-7c"),
+    get section() {
+      return s1;
+    },
   },
 
   item8: {
@@ -110,6 +131,9 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-8"),
     counter: document.querySelector("#s1-8c"),
+    get section() {
+      return s1;
+    },
   },
 };
 
