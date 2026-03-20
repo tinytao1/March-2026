@@ -28,7 +28,7 @@ const s1 = {
   item1: {
     name: "Tilapia",
     count: 0,
-    limit: null,
+    limit: false,
     selected: false,
     limit_reached: false,
     button: document.querySelector("#s1-1"),
@@ -43,7 +43,7 @@ const s1 = {
     __proto__: item_Methods,
     name: "Chicken Breast",
     count: 0,
-    limit: null,
+    limit: false,
     selected: false,
     limit_reached: false,
     button: document.querySelector("#s1-2"),

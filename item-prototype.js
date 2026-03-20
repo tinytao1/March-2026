@@ -1,4 +1,13 @@
 const item_Methods = {
+  init() {
+    // call to activate >> item#.init();
+    this.button.addEventListener(
+      "click",
+      () => this.select(),
+      //this.check_for_limits_reached(),
+    );
+  },
+
   increase_item_count_by_1() {
     this.count++;
   },
@@ -63,7 +72,7 @@ const item_Methods = {
     this.counter.innerHTML = this.count;
   },
 
-  hide_item_count() {
+  hide_item_counter() {
     this.counter.style.display = "none";
   },
 
@@ -91,7 +100,7 @@ const item_Methods = {
     });
   },
 
-  disable_other_cheeses() {
+  disable_unselected_cheeses() {
     this.section.items.forEach((item) => {
       if (!item.selected && item.is_cheese) {
         item.button.disabled = true;
@@ -125,18 +134,6 @@ const item_Methods = {
     this.limit_reached = false;
   },
 
-  if_item_limit_reached_is_true_then_drop_item() {
-    if (this.item.limit_reached) {
-      this.drop_item_from_section_count();
-      this.set_item_limit_reached_to_false();
-      this.set_item_count_to_zero();
-      this.set_item_selected_to_false();
-      this.set_section_limit_reached_false();
-      this.remove_display_item_count();
-      this.if_this_is_cheese_then_undo_disable_other_cheeses();
-    }
-  },
-
   check_for_is_cheese_limit_reached() {
     if (this.is_cheese && this.limit_reached) {
       this.disable_other_cheeses();
@@ -152,22 +149,58 @@ const item_Methods = {
   if_section_limit_is_reached_then_set_limit_reached_to_true() {
     if (this.section.count == this.section.limit) {
       this.set_section_limit_reached_true();
+      this.disable_all_unselected_item_buttons();
     }
   },
 
   if_item_limit_is_reached_then_set_limit_reached_to_true() {
     if (this.count == this.limit) {
       this.limit_reached = true;
+      if (this.is_cheese) {
+        this.disable_unselected_cheeses();
+      }
     }
   },
-  init() {
-    // call to activate >> item#.init();
-    this.button.addEventListener(
-      "click",
-      () => this.select(),
-      //this.check_for_limits_reached(),
-    );
+
+  add_1() {
+    this.increase_section_count_by_1();
+    this.set_section_selected_to_true();
+    //this.if_section_limit_is_reached_then_set_limit_reached_to_true();
+
+    this.increase_item_count_by_1();
+    this.set_item_selected_to_true();
+    this.display_item_counter();
+    //this.if_item_limit_is_reached_then_set_limit_reached_to_true();
+    //this.check_for_is_cheese_limit_reached();
+    this.if_item_limit_is_reached_then_set_limit_reached_to_true();
+    this.if_section_limit_is_reached_then_set_limit_reached_to_true();
+    //
   },
+
+  drop_item() {
+    this.enable_all_unselected_item_buttons();
+    this.subtract_item_count_from_section_count();
+    this.set_section_limit_reached_false();
+    this.if_section_count_is_zero_then_set_selected_to_false(); //un-tested
+
+    this.set_item_count_to_zero(); //un-tested
+    this.set_item_selected_to_false(); //un-tested
+    this.set_item_limit_reached_to_false(); //un-tested
+    this.hide_item_counter();
+  },
+
+  select() {
+    if (this.limit_reached) {
+      this.drop_item();
+    } else if (this.section.limit_reached) {
+    } else {
+      this.add_1();
+    }
+
+    this.log_combined_section_and_item_status();
+  },
+};
+/*
 
   check_for_limits_reached() {
     if (this.limit_reached || this.section.limit_reached) {
@@ -186,7 +219,7 @@ const item_Methods = {
       this.select();
     }
   },
-  /*
+
 check_for_item_limit_reached(){
   if (this.count == this.limit_reached) {
     this.set_item_limit_reached_to_true();
@@ -195,21 +228,6 @@ check_for_item_limit_reached(){
   }
 },
 */
-  select() {
-    this.increase_section_count_by_1();
-    this.set_section_selected_to_true();
-    //this.if_section_limit_is_reached_then_set_limit_reached_to_true();
-
-    this.increase_item_count_by_1();
-    this.set_item_selected_to_true();
-    //this.if_item_limit_is_reached_then_set_limit_reached_to_true();
-    //this.check_for_is_cheese_limit_reached();
-    this.if_item_limit_is_reached_then_set_limit_reached_to_true();
-    this.display_item_counter();
-    this.log_combined_section_and_item_status();
-  },
-};
-
 /*
   select_from_zero() {
     this.increase_item_count_by_1();
@@ -222,5 +240,18 @@ check_for_item_limit_reached(){
       this.disable_all_unselected_item_buttons();
     }
     this.log_combined_section_and_item_status();
+  },
+
+
+  if_item_limit_reached_is_true_then_drop_item() {
+    if (this.item.limit_reached) {
+      this.drop_item_from_section_count();
+      this.set_item_limit_reached_to_false();
+      this.set_item_count_to_zero();
+      this.set_item_selected_to_false();
+      this.set_section_limit_reached_false();
+      this.remove_display_item_count();
+      this.if_this_is_cheese_then_undo_disable_other_cheeses();
+    }
   },
  */
