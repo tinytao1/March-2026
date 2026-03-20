@@ -1,8 +1,8 @@
 "use strict";
 
 const s3 = {
-  __proto__: section_Methods,
   name: "Dairy",
+  abbr: "s3",
   count: 0,
   limit: 2,
   selected: false,
@@ -11,6 +11,7 @@ const s3 = {
   title: document.querySelector("#s3-title"),
   choose: document.querySelector("#s3-choose-amount"),
   // counter : document.querySelector('#s1c'),
+  __proto__: section_Methods,
   get items() {
     return [
       this.item1,
@@ -27,14 +28,14 @@ const s3 = {
   },
 
   item1: {
-    __proto__: item_Methods,
     name: "Whole Milk",
-    count: 0,
-    limit: false,
     selected: false,
+    count: 0,
     limit_reached: false,
+    limit: false,
     button: document.querySelector("#s3-1"),
     counter: document.querySelector("#s3-1c"),
+    __proto__: item_Methods,
     get section() {
       return s3;
     },

@@ -1,8 +1,8 @@
 "use strict";
 
 const s1 = {
-  __proto__: section_Methods,
   name: "Proteins",
+  abbr: "s1",
   count: 0,
   limit: 2,
   selected: false,
@@ -11,6 +11,7 @@ const s1 = {
   title: document.querySelector("#s1-title"),
   choose: document.querySelector("#s1-choose-amount"),
   // counter : document.querySelector('#s1c'),
+  __proto__: section_Methods,
   get items() {
     return [
       this.item1,
@@ -25,7 +26,6 @@ const s1 = {
   },
 
   item1: {
-    __proto__: item_Methods,
     name: "Tilapia",
     count: 0,
     limit: null,
@@ -33,6 +33,7 @@ const s1 = {
     limit_reached: false,
     button: document.querySelector("#s1-1"),
     counter: document.querySelector("#s1-1c"),
+    __proto__: item_Methods,
     get section() {
       return s1;
     },
@@ -53,7 +54,7 @@ const s1 = {
   },
 
   item3: {
-    __proto__: s1_items_proto,
+    __proto__: item_Methods,
     name: "Pork Chop",
     count: 0,
     limit: null,
@@ -70,7 +71,7 @@ const s1 = {
     __proto__: item_Methods,
     name: "Tempeh",
     count: 0,
-    limit: null,
+    limit: 1,
     selected: false,
     limit_reached: false,
     button: document.querySelector("#s1-4"),

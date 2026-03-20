@@ -5,8 +5,16 @@ const section_Methods = {
 
   log_section_status() {
     console.log(
-      `count:${this.count}, sel:${this.selected}, limit_rchd:${this.limit_reached}, Section:${this.name} `,
+      `count:${this.count}, sel:${this.selected}, lmt_rcd:${this.limit_reached}, Section:${this.name} `,
     );
+  },
+
+  log_all_items_status() {
+    this.items.forEach((item) => {
+      console.log(
+        `count:${item.count}, sel:${item.selected}, lmt_rcd:${item.limit_reached}, ${item.name} `,
+      );
+    });
   },
 
   set_section_selected_to_false() {
@@ -25,12 +33,6 @@ const section_Methods = {
   set_all_item_selecteds_to_false() {
     this.items.forEach((item) => {
       item.selected = false;
-    });
-  },
-
-  log_all_items_status() {
-    this.items.forEach((item) => {
-      console.log(`count:${item.count}, sel:${item.selected}, ${item.name} `);
     });
   },
 

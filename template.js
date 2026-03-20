@@ -33,10 +33,11 @@
 
 const s = {
   name: null,
-  count: 0,
-  limit: false,
+  abbr: null,
   selected: false,
+  count: 0,
   limit_reached: false,
+  limit: false,
 
   title: document.querySelector("#s-title"),
   choose: document.querySelector("#s-choose-amount"),
@@ -57,10 +58,10 @@ const s = {
 
   item: {
     name: null,
-    count: 0,
-    limit: false,
     selected: false,
+    count: 0,
     limit_reached: false,
+    limit: false,
     button: document.querySelector("#s-"),
     counter: document.querySelector("#s-c"),
      __proto__: item_Methods,
