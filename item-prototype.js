@@ -49,13 +49,8 @@ const item_Methods = {
 
   log_section_status() {
     console.log(
-      `count:${this.section.count}, sel:${this.section.selected}, lmt_rcd:${this.section.limit_reached}, ${this.section.name} `,
-    ); /*
-    console.log(
-      `Section ${this.section.name} count:${this.section.count}, selected:${this.section.selected},` +
-        "\n" +
-        `limit reached:${this.section.limit_reached}.`,
-    ); */
+      `count:${this.section.count}, sel:${this.section.selected}, lmt_rcd:${this.section.limit_reached}, ${this.section.abbr} ${this.section.name} `,
+    );
   },
 
   log_combined_section_and_item_status() {
