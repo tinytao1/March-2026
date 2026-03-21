@@ -1,5 +1,5 @@
 body {
-  background-color: dimgrey;
+  background-color: wheat; /* dimgrey; */
 }
 .item-div {
   margin-bottom: 4px;
@@ -17,7 +17,7 @@ body {
   display: none;
   /* padding: 1px 4px;  */
   /* background-color: rgb(233,233,237);  */
-  color: white; /* light gray:  rgb(233,233,237);  */
+  /*color: white; /* light gray:  rgb(233,233,237);  */
   /* border-radius: 9999px;  */
   /* border-bottom: 1px solid gray;  } */
 }

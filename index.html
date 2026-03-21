@@ -14,19 +14,9 @@
   <body>
     <button type="button" onclick="location.reload()">reload</button>
 
-    <button id="s1-reset" type="button" onclick="s1.section_reset()">
-      s1-reset
-    </button>
-
-    <button id="s1-reset" type="button" onclick="s2.section_reset()">
-      s2-reset
-    </button>
-
-    <button id="s3-reset" type="button" onclick="s3.section_reset()">
-      s3-reset
-    </button>
-
-    <button type="button" onclick="location.reload()">reload</button>
+        <button id="s1-reset" type="button" disabled onclick="/*section_methods.reset_all_sections()*/">
+          reset all
+        </button>
     
     <!-- START SECTION 1 -->
 
@@ -85,6 +75,13 @@
         <button id="s1-8" class="item-btn ">item8</button>
         <span id="s1-8c" class="counter ">0</span>
       </div>
+
+      <div class="reset-div" >
+        <button id="s1-reset" type="button" onclick="s1.section_reset()">
+          reset
+        </button>
+      </div>
+
     </div>
     <!-- END HTML SECTION 1  HTML-->
     <!--
@@ -192,6 +189,13 @@
         <span id="s3-10c" class="counter ">0</span>
       </div>
 
+      <div class="reset-div" >
+        <button id="s3-reset" type="button" onclick="s3.section_reset()">
+          reset
+        </button>
+      </div>
+
+    </div>
     <!--
 // SECTION 3 /////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -285,12 +289,6 @@
         >
       </div>
       <!-- END SECTION  HEADER -->
-brown rice
-oatmeal
-corn tortillas
-granola cereal
-whole wheat pasta
-whole wheat bread
       <div class="item-div">
         <button id="s6-1" class="item-btn ">item1</button>
         <span id="s6-1c" class="counter ">0</span>
@@ -326,6 +324,12 @@ whole wheat bread
         <span id="s6-6c" class="counter ">0</span>
       </div>
 
+    <div class="reset-div" >
+    <button id="s6-reset" type="button" onclick="s6.section_reset()">
+      reset
+    </button>
+    </div>
+
         <!--
 // SECTION 6 /////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -344,6 +348,7 @@ whole wheat bread
     <script src="s1-defin.js"></script>
     <script src="s2-defin.js"></script>
     <script src="s3-defin.js"></script>
+    <script src="s6-defin.js"></script>
     <script src="initialization.js"></script>
   </body>
 </html>

@@ -53,6 +53,15 @@ const section_Methods = {
     });
   },
 
+  reset_all_sections() {
+    s1.section_reset();
+    s2.section_reset();
+    s3.section_reset();
+    //s4.section_reset();
+    //s5.section_reset();
+    s6.section_reset();
+  },
+
   section_reset() {
     this.set_section_count_to_zero();
     this.set_section_selected_to_false();
