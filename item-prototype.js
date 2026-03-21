@@ -58,7 +58,7 @@ const item_Methods = {
 
   log_section_status() {
     console.log(
-      `count:${this.section.count}, sel:${this.section.selected}, lmt_rcd:${this.section.limit_reached}, ${this.section.abbr} ${this.section.name} `,
+      `count:${this.section.count}, sel:${this.section.selected}, lmt_rcd:${this.section.limit_reached}, ${this.section.section_abbr} ${this.section.name} `,
     );
   },
 
@@ -163,16 +163,14 @@ const item_Methods = {
   },
 
   add_1() {
-    this.increase_section_count_by_1();
-    this.set_section_selected_to_true();
-    //this.if_section_limit_is_reached_then_set_limit_reached_to_true();
-
     this.increase_item_count_by_1();
     this.set_item_selected_to_true();
     this.display_item_counter();
     //this.if_item_limit_is_reached_then_set_limit_reached_to_true();
-    //this.check_for_is_cheese_limit_reached();
     this.if_item_limit_is_reached_then_set_limit_reached_to_true();
+
+    this.increase_section_count_by_1();
+    this.set_section_selected_to_true();
     this.if_section_limit_is_reached_then_set_limit_reached_to_true();
     //
   },
@@ -190,10 +188,10 @@ const item_Methods = {
   },
 
   select() {
-    if (this.limit_reached) {
+    if (this.limit_reached || this.section.limit_reached) {
       this.drop_item();
-    } else if (this.section.limit_reached) {
-    } else {
+    } // else if (this.section.limit_reached) {}
+    else {
       this.add_1();
     }
 

@@ -32,3 +32,13 @@ h2 {
 .section-title {
   display: inline-block;
 }
+hr.fixed-width {
+  width: 168px;
+  margin-left: 5px;
+  margin-right: auto;
+}
+span.limit-notice-span {
+  margin-left: 40px;
+  display: block;
+  margin-bottom: 5px;
+}

@@ -1,6 +1,6 @@
 const s2 = {
   name: "Eggs",
-  abbr: "s2",
+  section_abbr: "s2",
   count: 0,
   limit: 1,
   selected: false,

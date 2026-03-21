@@ -2,7 +2,7 @@
 
 const s3 = {
   name: "Dairy",
-  abbr: "s3",
+  section_abbr: "s3",
   count: 0,
   limit: 2,
   selected: false,

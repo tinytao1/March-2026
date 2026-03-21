@@ -19,8 +19,8 @@
       <!-- END SECTION  HEADER -->
 
       <div class="item-div">
-        <button id="s-" class="item-btn inactive-btn">item</button>
-        <span id="s-c" class="counter inactive-counter">0</span>
+        <button id="s-" class="item-btn ">item</button>
+        <span id="s-c" class="counter ">0</span>
       </div>
 
         <!--

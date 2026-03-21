@@ -5,7 +5,7 @@ const section_Methods = {
 
   log_section_status() {
     console.log(
-      `count:${this.count}, sel:${this.selected}, lmt_rcd:${this.limit_reached}, ${this.abbr} ${this.name} `,
+      `count:${this.count}, sel:${this.selected}, lmt_rcd:${this.limit_reached}, ${this.section_abbr} ${this.name} `,
     );
   },
 

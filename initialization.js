@@ -51,6 +51,23 @@ s3.item8.button.innerHTML = s3.item8.name;
 s3.item9.button.innerHTML = s3.item9.name;
 s3.item10.button.innerHTML = s3.item10.name;
 
+s6.item1.init();
+s6.item2.init();
+s6.item3.init();
+s6.item4.init();
+s6.item5.init();
+s6.item6.init();
+
+s6.title.innerHTML = s6.name;
+s6.choose.innerHTML = s6.limit;
+
+s6.item1.button.innerHTML = s6.item1.name;
+s6.item2.button.innerHTML = s6.item2.name;
+s6.item3.button.innerHTML = s6.item3.name;
+s6.item4.button.innerHTML = s6.item4.name;
+s6.item5.button.innerHTML = s6.item5.name;
+s6.item6.button.innerHTML = s6.item6.name;
+
 /*
 
 s.item.init();
