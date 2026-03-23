@@ -1,4 +1,4 @@
-s1.item1.init();
+//s1.item1.init();
 
 s1.item1.init();
 s1.item2.init();
