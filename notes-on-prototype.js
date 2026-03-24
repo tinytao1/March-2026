@@ -1,3 +1,33 @@
+Example of working logic contained in object
+  initialized at start:
+const s1 = {
+	
+  myCount: 0,
+  
+  myFunc(){
+    alert(this.myCount);  
+  },
+  
+  count() {
+  this.myCount++
+  this.myCtr.innerHTML = this.myCount; 
+  },
+  
+  myCtr: document.getElementById("myCounter"),
+  btn: document.getElementById("myBtn"),
+  
+  init_cnt_btn() {
+  	this.btn.addEventListener("click", () => this.count());
+  }
+  
+};
+// Call it once at start.
+s1.init_cnt_btn();
+END END END END END END END END END END END 
+////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+
 "use strict";
 
 s1_items_proto = {
