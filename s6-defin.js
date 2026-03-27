@@ -5,11 +5,12 @@ const s6 = {
   section_abbr: "s6",
   selected: false,
   count: 0,
-  limit_reached: false,
   limit: 3,
+  limit_reached: false,
 
   title: document.querySelector("#s6-title"),
   choose: document.querySelector("#s6-choose-amount"),
+
   get items() {
     return [
       this.item1,

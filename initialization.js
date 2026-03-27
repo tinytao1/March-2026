@@ -1,5 +1,3 @@
-//s1.item1.init();
-
 s1.item1.initialize_item_button();
 s1.item2.initialize_item_button();
 s1.item3.initialize_item_button();
@@ -8,36 +6,8 @@ s1.item5.initialize_item_button();
 s1.item6.initialize_item_button();
 s1.item7.initialize_item_button();
 s1.item8.initialize_item_button();
-s1.reset.initialize_reset_button();
 
-s6.item1.initialize_item_button();
-s6.item2.initialize_item_button();
-s6.item3.initialize_item_button();
-s6.item4.initialize_item_button();
-s6.item5.initialize_item_button();
-s6.item6.initialize_item_button();
-s6.reset.initialize_reset_button();
-
-s1.title.innerHTML = s1.name;
-s1.choose.innerHTML = s1.limit;
-
-s1.item1.button.innerHTML = s1.item1.name;
-s1.item2.button.innerHTML = s1.item2.name;
-s1.item3.button.innerHTML = s1.item3.name;
-s1.item4.button.innerHTML = s1.item4.name;
-s1.item5.button.innerHTML = s1.item5.name;
-s1.item6.button.innerHTML = s1.item6.name;
-s1.item7.button.innerHTML = s1.item7.name;
-s1.item8.button.innerHTML = s1.item8.name;
-s1.reset.button.innerHTML = s1.reset.name;
-
-/*
-s2.item1.init();
-
-s2.title.innerHTML = s2.name;
-s2.choose.innerHTML = s2.limit;
-
-s2.item1.button.innerHTML = s2.item1.name;
+s2.item1.initialize_item_button();
 
 s3.item1.initialize_item_button();
 s3.item2.initialize_item_button();
@@ -50,8 +20,60 @@ s3.item8.initialize_item_button();
 s3.item9.initialize_item_button();
 s3.item10.initialize_item_button();
 
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+// s4.item.initialize_item_button();
+
+// s5.item.initialize_item_button();
+// s5.item.initialize_item_button();
+// s5.item.initialize_item_button();
+// s5.item.initialize_item_button();
+
+s6.item1.initialize_item_button();
+s6.item2.initialize_item_button();
+s6.item3.initialize_item_button();
+s6.item4.initialize_item_button();
+s6.item5.initialize_item_button();
+s6.item6.initialize_item_button();
+
+s1.reset.initialize_reset_button();
+s2.reset.initialize_reset_button();
+s3.reset.initialize_reset_button();
+// s4.reset.initialize_reset_button();
+// s5.reset.initialize_reset_button();
+s6.reset.initialize_reset_button();
+
+s1.title.innerHTML = s1.name;
+s2.title.innerHTML = s2.name;
 s3.title.innerHTML = s3.name;
+// s4.title.innerHTML = s4.name;
+// s5.title.innerHTML = s5.name;
+s6.title.innerHTML = s6.name;
+
+s1.choose.innerHTML = s1.limit;
+s2.choose.innerHTML = s2.limit;
 s3.choose.innerHTML = s3.limit;
+// s4.choose.innerHTML = s4.limit;
+// s5.choose.innerHTML = s5.limit;
+s6.choose.innerHTML = s6.limit;
+
+s1.item1.button.innerHTML = s1.item1.name;
+s1.item2.button.innerHTML = s1.item2.name;
+s1.item3.button.innerHTML = s1.item3.name;
+s1.item4.button.innerHTML = s1.item4.name;
+s1.item5.button.innerHTML = s1.item5.name;
+s1.item6.button.innerHTML = s1.item6.name;
+s1.item7.button.innerHTML = s1.item7.name;
+s1.item8.button.innerHTML = s1.item8.name;
+
+s2.item1.button.innerHTML = s2.item1.name;
 
 s3.item1.button.innerHTML = s3.item1.name;
 s3.item2.button.innerHTML = s3.item2.name;
@@ -62,10 +84,22 @@ s3.item6.button.innerHTML = s3.item6.name;
 s3.item7.button.innerHTML = s3.item7.name;
 s3.item8.button.innerHTML = s3.item8.name;
 s3.item9.button.innerHTML = s3.item9.name;
-s3.item10.button.innerHTML = s3.item10.name;
-*/
-s6.title.innerHTML = s6.name;
-s6.choose.innerHTML = s6.limit;
+
+// s4.item.button.innerHTML = s4.item.name; fruits & veggies
+// s4.item.button.innerHTML = s4.item.name;
+// s4.item.button.innerHTML = s4.item.name;
+// s4.item.button.innerHTML = s4.item.name;
+// s4.item.button.innerHTML = s4.item.name;
+// s4.item.button.innerHTML = s4.item.name;
+// s4.item.button.innerHTML = s4.item.name;
+// s4.item.button.innerHTML = s4.item.name;
+// s4.item.button.innerHTML = s4.item.name;
+// s4.item.button.innerHTML = s4.item.name;
+
+// s5.item1.button.innerHTML = s5.item1.name; beans
+// s5.item2.button.innerHTML = s5.item2.name;
+// s5.item3.button.innerHTML = s5.item3.name;
+// s5.item4.button.innerHTML = s5.item4.name;
 
 s6.item1.button.innerHTML = s6.item1.name;
 s6.item2.button.innerHTML = s6.item2.name;
@@ -73,14 +107,23 @@ s6.item3.button.innerHTML = s6.item3.name;
 s6.item4.button.innerHTML = s6.item4.name;
 s6.item5.button.innerHTML = s6.item5.name;
 s6.item6.button.innerHTML = s6.item6.name;
+
+s1.reset.button.innerHTML = s1.reset.name;
+s2.reset.button.innerHTML = s2.reset.name;
+s3.reset.button.innerHTML = s3.reset.name;
+// s4.reset.button.innerHTML = s4.reset.name;
+// s5.reset.button.innerHTML = s5.reset.name;
 s6.reset.button.innerHTML = s6.reset.name;
 
 /*
-s.item.init();
+
+s.item1.initialize_item_button();
+s.reset.initialize_reset_button();
 
 s.title.innerHTML = s.name;
 s.choose.innerHTML = s.limit;
 
-s.item.button.innerHTML = s.item.name;
+s.item1.button.innerHTML = s.item1.name;
+s.reset.button.innerHTML = s.reset.name;
 
 */

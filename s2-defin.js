@@ -1,3 +1,5 @@
+"use strict";
+
 const s2 = {
   name: "Eggs",
   section_abbr: "s2",
@@ -8,14 +10,21 @@ const s2 = {
 
   title: document.querySelector("#s2-title"),
   choose: document.querySelector("#s2-choose-amount"),
-  // counter : document.querySelector('#sc'),
-  __proto__: section_Methods,
+
   get items() {
     return [this.item1];
   },
 
-  item1: {
+  reset: {
+    name: "reset",
+    button: document.querySelector("#s2-reset"),
     __proto__: item_Methods,
+    get section() {
+      return s2;
+    },
+  },
+
+  item1: {
     name: "6 Raw Eggs",
     count: 0,
     limit: 1,
@@ -26,5 +35,6 @@ const s2 = {
     get section() {
       return s2;
     },
+    __proto__: item_Methods,
   },
 };

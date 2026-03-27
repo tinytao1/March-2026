@@ -3,13 +3,14 @@
 const s1 = {
   name: "Proteins",
   section_abbr: "s1",
+  selected: false,
   count: 0,
   limit: 2,
-  selected: false,
   limit_reached: false,
 
   title: document.querySelector("#s1-title"),
   choose: document.querySelector("#s1-choose-amount"),
+
   get items() {
     return [
       this.item1,
@@ -38,6 +39,7 @@ const s1 = {
     limit: false,
     selected: false,
     limit_reached: false,
+
     button: document.querySelector("#s1-1"),
     counter: document.querySelector("#s1-1c"),
     __proto__: item_Methods,

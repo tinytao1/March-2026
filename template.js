@@ -15,21 +15,20 @@
           <span class="choose-amount" id="s-choose-amount"> 0 </span>
           )</span
         >
-      </div>
-      <!-- END SECTION  HEADER -->
-
+      </div> <!-- END SECTION  HEADER -->
+      
       <div class="item-div">
         <button id="s-" class="item-btn ">item</button>
         <span id="s-c" class="counter ">0</span>
       </div>
 
       <div class="reset-div" >
-        <button id="s1-reset" class="reset-btn ">
+        <button id="s-reset" class="reset-btn ">
           ?reset?
         </button>
       </div>
 
-
+    </div> <!-- END SECTION  -->
         <!--
 // SECTION  /////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////

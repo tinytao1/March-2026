@@ -7,10 +7,11 @@ const s3 = {
   limit: 2,
   selected: false,
   limit_reached: false,
+  cheese_is_selected: false,
 
   title: document.querySelector("#s3-title"),
   choose: document.querySelector("#s3-choose-amount"),
-  // counter : document.querySelector('#s1c'),
+
   __proto__: section_Methods,
   get items() {
     return [
@@ -27,12 +28,22 @@ const s3 = {
     ];
   },
 
+  reset: {
+    name: "reset",
+    button: document.querySelector("#s3-reset"),
+    __proto__: item_Methods,
+    get section() {
+      return s3;
+    },
+  },
+
   item1: {
     name: "Whole Milk",
     selected: false,
     count: 0,
     limit_reached: false,
     limit: false,
+
     button: document.querySelector("#s3-1"),
     counter: document.querySelector("#s3-1c"),
     __proto__: item_Methods,
@@ -40,6 +51,7 @@ const s3 = {
       return s3;
     },
   },
+
   item2: {
     __proto__: item_Methods,
     name: "2% Milk",
@@ -53,6 +65,7 @@ const s3 = {
       return s3;
     },
   },
+
   item3: {
     __proto__: item_Methods,
     name: "Fat Free Milk",
@@ -66,6 +79,7 @@ const s3 = {
       return s3;
     },
   },
+
   item4: {
     __proto__: item_Methods,
     name: "Soymilk, Plain",
@@ -79,6 +93,7 @@ const s3 = {
       return s3;
     },
   },
+
   item5: {
     __proto__: item_Methods,
     name: "Plain Yogurt",
@@ -92,6 +107,7 @@ const s3 = {
       return s3;
     },
   },
+
   item6: {
     __proto__: item_Methods,
     name: "Cottage Cheese",
@@ -105,6 +121,7 @@ const s3 = {
       return s3;
     },
   },
+
   item7: {
     name: "Mozzarella",
     is_cheese: true,
@@ -119,6 +136,7 @@ const s3 = {
       return s3;
     },
   },
+
   item8: {
     name: "Cheddar",
     is_cheese: true,
@@ -133,6 +151,7 @@ const s3 = {
       return s3;
     },
   },
+
   item9: {
     name: "Monterey Jack",
     is_cheese: true,
@@ -147,6 +166,7 @@ const s3 = {
       return s3;
     },
   },
+
   item10: {
     name: "Pepper Jack",
     is_cheese: true,
