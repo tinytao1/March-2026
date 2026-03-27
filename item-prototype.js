@@ -1,54 +1,177 @@
 const item_Methods = {
-  init() {
-    // call to activate >> item#.init();
-    this.button.addEventListener(
-      "click",
-      () => this.select(),
-      //this.check_for_limits_reached(),
-    );
+  initialize_item_button() {
+    this.button.addEventListener("click", () => this.select());
   },
 
-  increase_item_count_by_1() {
-    this.count++;
-  },
-  decrease_item_count() {
-    this.count--;
+  initialize_reset_button() {
+    this.button.addEventListener("click", () => this.reset_sect());
   },
 
-  set_item_count_to_zero() {
-    this.count = 0;
-  },
+  /* Item
+      - selected
+      - count
+      - lmt_rcd
+      - counter show/hide
+      - reset
 
-  set_section_count_to_zero() {
-    this.section.count = 0;
-  },
+     Section
+      - selected
+      - count
+      - lmt_rcd  */
 
-  increase_section_count_by_1() {
-    this.section.count++;
-  },
-  decrease_section_count() {
-    this.section.count--;
-  },
-
-  subtract_item_count_from_section_count() {
-    this.section.count = this.section.count - this.count;
-  },
-
-  set_item_selected_to_true() {
+  selected_item_true() {
     this.selected = true;
   },
 
-  set_item_selected_to_false() {
+  selected_item_false() {
     this.selected = false;
   },
 
-  set_section_selected_to_true() {
+  count_increment_item() {
+    this.count++;
+  },
+
+  count_zero_item() {
+    this.count = 0;
+    this.selected_item_false();
+    this.limit_reached_item_false();
+    this.counter_hide_item();
+  },
+
+  limit_reached_item_true() {
+    this.limit_reached = true;
+  },
+
+  limit_reached_item_false() {
+    this.limit_reached = false;
+  },
+
+  counter_show_item() {
+    this.counter.style.display = "inline";
+  },
+
+  counter_hide_item() {
+    this.counter.style.display = "none";
+  },
+
+  counter_update_item() {
+    this.counter.innerHTML = this.count;
+    if (this.count === 0) {
+      this.counter_hide_item();
+    } else {
+      this.counter_show_item();
+    }
+  },
+
+  ////////////////////////////////////
+  ////////////////////////////////////
+  ////////////////////////////////////
+  //  SECT methods START
+
+  selected_sect_true() {
     this.section.selected = true;
   },
 
-  set_section_selected_to_false() {
+  selected_sect_false() {
     this.section.selected = false;
   },
+
+  count_increment_sect() {
+    this.section.count++;
+  },
+
+  count_zero_sect() {
+    this.section.count = 0;
+  },
+
+  lmt_rcd_sect_true() {
+    this.section.limit_reached = true;
+  },
+
+  lmt_rcd_sect_false() {
+    this.section.limit_reached = false;
+  },
+
+  enable_all_btns() {
+    this.section.items.forEach((item) => {
+      item.button.disabled = false;
+    });
+  },
+
+  all_items_selected_false() {
+    this.section.items.forEach((item) => {
+      item.selected = false;
+    });
+  },
+
+  all_items_count_zero() {
+    this.section.items.forEach((item) => {
+      item.count = 0;
+    });
+  },
+
+  all_items_lmt_rcd_false() {
+    this.section.items.forEach((item) => {
+      item.limit_reached = false;
+    });
+  },
+
+  all_counters_update() {
+    this.section.items.forEach((item) => {
+      item.counter.innerHTML = this.count;
+    });
+  },
+
+  all_counters_hide() {
+    this.section.items.forEach((item) => {
+      item.counter.style.display = "none";
+    });
+  },
+
+  log_all() {
+    this.section.items.forEach((item) => {
+      console.log(
+        `count:${item.count}, sel:${item.selected}, lmt_rcd:${item.limit_reached}, ${item.name} `,
+      );
+    });
+    this.log_sect_status();
+  },
+
+  reset_sect() {
+    this.enable_all_btns();
+    this.all_items_selected_false();
+    this.all_items_count_zero();
+    this.all_items_lmt_rcd_false();
+    this.all_counters_update();
+    this.all_counters_hide();
+
+    this.lmt_rcd_sect_false();
+    this.count_zero_sect();
+    this.selected_sect_false();
+
+    this.log_all();
+  },
+
+  //  SECT methods  END
+  ////////////////////////////////////
+  ////////////////////////////////////
+  ////////////////////////////////////
+  /*
+    
+
+    
+
+     Item
+      - selected
+      - count
+      - lmt_rcd
+      - counter show/hide
+      - reset
+
+     Section
+      - selected
+      - count
+      - lmt_rcd  */
 
   log_item_status() {
     console.log(
@@ -56,35 +179,18 @@ const item_Methods = {
     );
   },
 
-  log_section_status() {
+  log_sect_status() {
     console.log(
       `count:${this.section.count}, sel:${this.section.selected}, lmt_rcd:${this.section.limit_reached}, ${this.section.section_abbr} ${this.section.name} `,
     );
   },
 
-  log_combined_section_and_item_status() {
+  log_combined_item_sect() {
     this.log_item_status();
-    this.log_section_status();
+    this.log_sect_status();
   },
 
-  display_item_counter() {
-    this.counter.style.display = "inline";
-    this.counter.innerHTML = this.count;
-  },
-
-  hide_item_counter() {
-    this.counter.style.display = "none";
-  },
-
-  set_section_limit_reached_true() {
-    this.section.limit_reached = true;
-  },
-
-  set_section_limit_reached_false() {
-    this.section.limit_reached = false;
-  },
-
-  disable_all_unselected_item_buttons() {
+  disable_unselected_btns() {
     this.section.items.forEach((item) => {
       if (!item.selected) {
         item.button.disabled = true;
@@ -92,7 +198,7 @@ const item_Methods = {
     });
   },
 
-  enable_all_unselected_item_buttons() {
+  enable_unselected_btns() {
     this.section.items.forEach((item) => {
       if (!item.selected) {
         item.button.disabled = false;
@@ -100,156 +206,62 @@ const item_Methods = {
     });
   },
 
-  disable_unselected_cheeses() {
-    this.section.items.forEach((item) => {
-      if (!item.selected && item.is_cheese) {
-        item.button.disabled = true;
-      }
-    });
-  },
-
-  enable_other_cheeses() {
-    this.section.items.forEach((item) => {
-      if (!item.selected && item.is_cheese) {
-        item.button.disabled = false;
-      }
-    });
-  },
-
-  drop_item_from_section_count() {
+  subtract_item_from_section_count() {
     this.section.count = this.section.count - this.count;
   },
 
-  if_section_count_is_zero_then_set_selected_to_false() {
+  drop_item_from_section() {
+    this.subtract_item_from_section_count();
+    this.lmt_rcd_sect_false();
     if (this.section.count == 0) {
-      this.section.selected = false;
+      this.selected_sect_false();
     }
+    this.count_zero_item();
+    this.selected_item_false();
+    this.limit_reached_item_false();
+    this.enable_unselected_btns();
   },
 
-  set_item_limit_reached_to_true() {
-    this.limit_reached = true;
-  },
+  /* Item
+      - selected
+      - count
+      - lmt_rcd
+      - display/hide counter
+*/
 
-  set_item_limit_reached_to_false() {
-    this.limit_reached = false;
-  },
-
-  check_for_is_cheese_limit_reached() {
-    if (this.is_cheese && this.limit_reached) {
-      this.disable_other_cheeses();
-    }
-  },
-
-  check_for_is_cheese_then_enable_other_cheeses() {
-    if (this.is_cheese) {
-      this.enable_other_cheeses();
-    }
-  },
-
-  if_section_limit_is_reached_then_set_limit_reached_to_true() {
-    if (this.section.count == this.section.limit) {
-      this.set_section_limit_reached_true();
-      this.disable_all_unselected_item_buttons();
-    }
-  },
-
-  if_item_limit_is_reached_then_set_limit_reached_to_true() {
+  add_item() {
+    /* First update item */
+    this.selected_item_true();
+    this.count_increment_item();
     if (this.count == this.limit) {
-      this.limit_reached = true;
-      if (this.is_cheese) {
-        this.disable_unselected_cheeses();
-      }
+      this.limit_reached_item_true();
     }
-  },
-
-  add_1() {
-    this.increase_item_count_by_1();
-    this.set_item_selected_to_true();
-    this.display_item_counter();
-    //this.if_item_limit_is_reached_then_set_limit_reached_to_true();
-    this.if_item_limit_is_reached_then_set_limit_reached_to_true();
-
-    this.increase_section_count_by_1();
-    this.set_section_selected_to_true();
-    this.if_section_limit_is_reached_then_set_limit_reached_to_true();
-    //
-  },
-
-  drop_item() {
-    this.enable_all_unselected_item_buttons();
-    this.subtract_item_count_from_section_count();
-    this.set_section_limit_reached_false();
-    this.if_section_count_is_zero_then_set_selected_to_false(); //un-tested
-
-    this.set_item_count_to_zero(); //un-tested
-    this.set_item_selected_to_false(); //un-tested
-    this.set_item_limit_reached_to_false(); //un-tested
-    this.hide_item_counter();
+    this.counter_update_item();
+    /* Second update section */
+    this.selected_sect_true();
+    this.count_increment_sect();
+    if (this.section.count == this.section.limit) {
+      this.lmt_rcd_sect_true();
+      this.disable_unselected_btns();
+    }
   },
 
   select() {
     if (this.limit_reached || this.section.limit_reached) {
-      this.drop_item();
-    } // else if (this.section.limit_reached) {}
-    else {
-      this.add_1();
+      this.drop_item_from_section();
+    } else {
+      this.add_item();
     }
-
-    this.log_combined_section_and_item_status();
+    this.log_combined_item_sect();
   },
 };
-/*
+/* Item
+      - selected
+      - count
+      - lmt_rcd
+      - display/hide counter
 
-  check_for_limits_reached() {
-    if (this.limit_reached || this.section.limit_reached) {
-      this.drop_item_from_section_count();
-      //this.if_section_count_is_zero_then_set_selected_to_false();
-      //this.set_section_limit_reached_false();
-
-      //this.set_item_count_to_zero();
-      //this.set_item_selected_to_false();
-      //this.set_item_limit_reached_to_false();
-      //this.hide_item_count();
-
-      //this.check_for_is_cheese_then_enable_other_cheeses();
-      this.log_combined_section_and_item_status();
-    } else {
-      this.select();
-    }
-  },
-
-check_for_item_limit_reached(){
-  if (this.count == this.limit_reached) {
-    this.set_item_limit_reached_to_true();
-  } else {
-    this.select();
-  }
-},
-*/
-/*
-  select_from_zero() {
-    this.increase_item_count_by_1();
-    this.set_item_selected_to_true();
-    this.increase_section_count();
-    this.set_section_selected_to_true();
-    this.display_item_count();
-    if (this.section.count == this.section.limit) {
-      this.set_section_limit_reached_true();
-      this.disable_all_unselected_item_buttons();
-    }
-    this.log_combined_section_and_item_status();
-  },
-
-
-  if_item_limit_reached_is_true_then_drop_item() {
-    if (this.item.limit_reached) {
-      this.drop_item_from_section_count();
-      this.set_item_limit_reached_to_false();
-      this.set_item_count_to_zero();
-      this.set_item_selected_to_false();
-      this.set_section_limit_reached_false();
-      this.remove_display_item_count();
-      this.if_this_is_cheese_then_undo_disable_other_cheeses();
-    }
-  },
- */
+     Section
+      - selected
+      - count
+      - lmt_rcd  */
