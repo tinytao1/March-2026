@@ -47,7 +47,7 @@ const item_Methods = {
   },
 
   counter_show_item() {
-    this.counter.style.display = "inline";
+    this.counter.style.display = "inline-block";
   },
 
   counter_hide_item() {
