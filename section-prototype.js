@@ -1,4 +1,5 @@
 const section_Methods = {
+  /*
   set_section_count_to_zero() {
     this.count = 0;
   },
@@ -72,7 +73,7 @@ const section_Methods = {
     this.remove_display_all_item_counts();
     this.log_all_items_status();
     this.log_section_status();
-  },
+  }, */
 };
 
 /* HTML SECTION TEMPLATE
@@ -106,3 +107,4 @@ const section_Methods = {
 // SECTION  /////////////////////////////////////////////////////////////////////////////////////
 -->
 */
+
