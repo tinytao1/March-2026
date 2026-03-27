@@ -10,8 +10,6 @@ const s1 = {
 
   title: document.querySelector("#s1-title"),
   choose: document.querySelector("#s1-choose-amount"),
-  // counter : document.querySelector('#s1c'),
-  __proto__: section_Methods,
   get items() {
     return [
       this.item1,
@@ -23,6 +21,15 @@ const s1 = {
       this.item7,
       this.item8,
     ];
+  },
+
+  reset: {
+    name: "reset",
+    button: document.querySelector("#s1-reset"),
+    __proto__: item_Methods,
+    get section() {
+      return s1;
+    },
   },
 
   item1: {
