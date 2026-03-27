@@ -23,6 +23,13 @@
         <span id="s-c" class="counter ">0</span>
       </div>
 
+      <div class="reset-div" >
+        <button id="s1-reset" class="reset-btn ">
+          ?reset?
+        </button>
+      </div>
+
+
         <!--
 // SECTION  /////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -54,6 +61,15 @@ const s = {
       this.item7,
       this.item8,
     ];
+  },
+
+  reset: {
+    name: "reset",
+    button: document.querySelector("#s-reset"),
+    __proto__: item_Methods,
+    get section() {
+      return s;
+    },
   },
 
   item: {
