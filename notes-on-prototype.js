@@ -1,32 +1,189 @@
-Example of working logic contained in object
-  initialized at start:
-const s1 = {
-	
-  myCount: 0,
-  
-  myFunc(){
-    alert(this.myCount);  
-  },
-  
-  count() {
-  this.myCount++
-  this.myCtr.innerHTML = this.myCount; 
-  },
-  
-  myCtr: document.getElementById("myCounter"),
-  btn: document.getElementById("myBtn"),
-  
-  init_cnt_btn() {
-  	this.btn.addEventListener("click", () => this.count());
-  }
-  
-};
-// Call it once at start.
-s1.init_cnt_btn();
-END END END END END END END END END END END 
-////////////////////////////////////////////
-////////////////////////////////////////////
-////////////////////////////////////////////
+
+// SECTION  2 //////////////////////// 
+--> 
+      <!-- START HTML SECTION 2 -->
+    <div class="section" id="s2-section-div">
+
+      <div class="section-header" id="s2-header">
+        <!-- START SECTION 2 HEADER -->
+
+        <h2 class="section-title" id="s2-title">section title</h2>
+        <!-- <span class="section-counter" id="s1c"> 0 </span> -->
+
+        <span
+          >(choose
+          <span class="choose-amount" id="s2-choose-amount"> 0 </span>
+          )</span
+        >
+      </div>
+      <!-- END SECTION 2 HEADER -->
+
+      <div class="item-div">
+        <button id="s2-1" class="item-btn ">item1</button>
+        <span id="s2-1c" class="counter ">0</span>
+      </div>
+    </div>
+    <!-- END HTML SECTION 2 -->
+        <!--
+// SECTION  2 ////////////////////////
+//////////////////////////////////////
+// SECTION  3 ////////////////////////
+--> 
+    <!-- START SECTION 3 -->
+
+    <div class="section" id="s3-section-div">
+
+      <div class="section-header" id="s3-header">
+        <!-- START SECTION  HEADER -->
+
+        <h2 class="section-title" id="s3-title">section title</h2>
+        <!-- <span class="section-counter" id="sc"> 0 </span> -->
+
+        <span
+          >(choose
+          <span class="choose-amount" id="s3-choose-amount"> 0 </span>
+          )</span
+        >
+      </div>
+      <!-- END SECTION  HEADER -->
+      <!-- START SECTION  BODY -->
+
+      <div class="item-div">
+        <button id="s3-1" class="item-btn ">item1</button>
+        <span id="s3-1c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-2" class="item-btn ">item2</button>
+        <span id="s3-2c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-3" class="item-btn ">item3</button>
+        <span id="s3-3c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-4" class="item-btn ">item4</button>
+        <span id="s3-4c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-5" class="item-btn ">item5</button>
+        <span id="s3-5c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-6" class="item-btn ">item6</button>
+        <span id="s3-6c" class="counter ">0</span>
+      </div>
+
+      <div class="limit-within-section">
+      <hr>
+      <div class="limit-of-text"> Only 1 choice can be cheese </div>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-7" class="item-btn ">item7</button>
+        <span id="s3-7c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-8" class="item-btn ">item8</button>
+        <span id="s3-8c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-9" class="item-btn ">item9</button>
+        <span id="s3-9c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s3-10" class="item-btn ">item10</button>
+        <span id="s3-10c" class="counter ">0</span>
+      </div>
+
+      <div class="reset-div" >
+        <button id="s3-reset" type="button" onclick="s3.section_reset()">
+          reset
+        </button>
+      </div>
+
+    </div>
+        <!--
+// SECTION  3 ////////////////////////
+//////////////////////////////////////
+// SECTION  4 ////////////////////////
+--> 
+    <!-- START SECTION 4 -->
+
+    <div class="section" id="s4-section-div">
+
+      <div class="section-header" id="s4-header">
+        <!-- START SECTION  HEADER -->
+
+        <h2 class="section-title" id="s4-title">section title (Fruits & Veggies)</h2>
+        <!-- <span class="section-counter" id="sc"> 0 </span> -->
+
+        <span
+          >(choose
+          <span class="choose-amount" id="s4-choose-amount"> 0 </span>
+          )</span
+        >
+      </div>
+      <!-- END SECTION  HEADER -->
+
+      <div class="item-div">
+        <button id="s4-" class="item-btn ">item</button>
+        <span id="s4-c" class="counter ">0</span>
+      </div>
+
+        <!--
+// SECTION  4 ////////////////////////
+//////////////////////////////////////
+// SECTION  5 ////////////////////////
+--> 
+    <!-- START SECTION 5-->
+
+    <div class="section" id="s5-section-div">
+
+      <div class="section-header" id="s5-header">
+        <!-- START SECTION  HEADER -->
+
+        <h2 class="section-title" id="s5-title">section title (s5 Beans) </h2>
+        <!-- <span class="section-counter" id="sc"> 0 </span> -->
+
+        <span
+          >(choose
+          <span class="choose-amount" id="s5-choose-amount"> 0 </span>
+          )</span
+        >
+      </div>
+      <!-- END SECTION  HEADER -->
+
+      <div class="item-div">
+        <button id="s5-" class="item-btn ">item1</button>
+        <span id="s5-c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s5-" class="item-btn ">item2</button>
+        <span id="s5-c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s5-" class="item-btn ">item3</button>
+        <span id="s5-c" class="counter ">0</span>
+      </div>
+
+      <div class="item-div">
+        <button id="s5-" class="item-btn ">item4</button>
+        <span id="s5-c" class="counter ">0</span>
+      </div>
+
+        <!--
+// SECTION  5 ////////////////////////
+//////////////////////////////////////</div>
 
 "use strict";
 
