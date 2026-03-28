@@ -186,7 +186,7 @@ const item_Methods = {
 
   log_sect_status() {
     console.log(
-      `count:${this.section.count}, sel:${this.section.selected}, lmt_rcd:${this.section.limit_reached}, ${this.section.section_abbr} ${this.section.name} `,
+      `count:${this.section.count}, sel:${this.section.selected}, lmt_rcd:${this.section.limit_reached}, selected_subgroup_cheese: ${this.section.selected_subgroup_cheese},  ${this.section.section_abbr} ${this.section.name} `,
     );
   },
 
