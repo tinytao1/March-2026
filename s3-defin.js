@@ -7,7 +7,7 @@ const s3 = {
   limit: 2,
   selected: false,
   limit_reached: false,
-  cheese_is_selected: false,
+  selected_subgroup_cheese: false,
 
   title: document.querySelector("#s3-title"),
   choose: document.querySelector("#s3-choose-amount"),
@@ -28,9 +28,21 @@ const s3 = {
     ];
   },
 
+  get cheeses() {
+    return [this.item7, this.item8, this.item9, this.item10];
+  },
+
   reset: {
     name: "reset",
     button: document.querySelector("#s3-reset"),
+    __proto__: item_Methods,
+    get section() {
+      return s3;
+    },
+  },
+
+  cheese: {
+    button: document.querySelector("#s3-cheese"),
     __proto__: item_Methods,
     get section() {
       return s3;
@@ -124,7 +136,7 @@ const s3 = {
 
   item7: {
     name: "Mozzarella",
-    is_cheese: true,
+    subgroup_cheese: true,
     count: 0,
     limit: 1,
     selected: false,
@@ -139,7 +151,7 @@ const s3 = {
 
   item8: {
     name: "Cheddar",
-    is_cheese: true,
+    subgroup_cheese: true,
     count: 0,
     limit: 1,
     selected: false,
@@ -154,7 +166,7 @@ const s3 = {
 
   item9: {
     name: "Monterey Jack",
-    is_cheese: true,
+    subgroup_cheese: true,
     count: 0,
     limit: 1,
     selected: false,
@@ -169,7 +181,7 @@ const s3 = {
 
   item10: {
     name: "Pepper Jack",
-    is_cheese: true,
+    subgroup_cheese: true,
     count: 0,
     limit: 1,
     selected: false,

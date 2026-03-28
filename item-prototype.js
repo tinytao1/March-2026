@@ -7,6 +7,10 @@ const item_Methods = {
     this.button.addEventListener("click", () => this.reset_sect());
   },
 
+  initialize_cheese_button() {
+    this.button.addEventListener("click", () => this.log_cheese_status());
+  },
+
   /* Item
       - selected
       - count
@@ -74,6 +78,14 @@ const item_Methods = {
 
   selected_sect_false() {
     this.section.selected = false;
+  },
+
+  selected_subgrp_cheese_true() {
+    this.section.subgroup_cheese_selected = true;
+  },
+
+  selected_subgrp_cheese_false() {
+    this.section.subgroup_cheese_selected = false;
   },
 
   count_increment_sect() {
@@ -185,6 +197,12 @@ const item_Methods = {
     );
   },
 
+  log_cheese_status() {
+    console.log(
+      `selected_subgroup_cheese: ${this.section.selected_subgroup_cheese}, ${this.section.section_abbr} ${this.section.name} `,
+    );
+  },
+
   log_combined_item_sect() {
     this.log_item_status();
     this.log_sect_status();
@@ -192,6 +210,14 @@ const item_Methods = {
 
   disable_unselected_btns() {
     this.section.items.forEach((item) => {
+      if (!item.selected) {
+        item.button.disabled = true;
+      }
+    });
+  },
+
+  disable_unselected_cheeses() {
+    this.section.cheeses.forEach((item) => {
       if (!item.selected) {
         item.button.disabled = true;
       }
@@ -216,10 +242,15 @@ const item_Methods = {
     if (this.section.count == 0) {
       this.selected_sect_false();
     }
+
     this.count_zero_item();
     this.selected_item_false();
     this.limit_reached_item_false();
     this.enable_unselected_btns();
+
+    if (this.section.selected_subgroup_cheese) {
+      this.disable_unselected_cheeses();
+    }
   },
 
   /* Item
@@ -244,6 +275,13 @@ const item_Methods = {
       this.lmt_rcd_sect_true();
       this.disable_unselected_btns();
     }
+
+    /*
+    if (this.subgroup_cheese) {
+      this.selected_subgrp_cheese_true();
+      // this.disable_unselected_cheeses();
+      this.log_cheese_status();
+    } */
   },
 
   select() {
@@ -253,6 +291,7 @@ const item_Methods = {
       this.add_item();
     }
     this.log_combined_item_sect();
+    s3.subgroup_cheese_selected = true;
   },
 };
 /* Item
@@ -264,4 +303,5 @@ const item_Methods = {
      Section
       - selected
       - count
-      - lmt_rcd  */
+      - lmt_rcd
+      - subgp_cheese_selected  */

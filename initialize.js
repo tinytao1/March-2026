@@ -46,6 +46,7 @@ s6.item6.initialize_item_button();
 s1.reset.initialize_reset_button();
 s2.reset.initialize_reset_button();
 s3.reset.initialize_reset_button();
+s3.cheese.initialize_cheese_button();
 // s4.reset.initialize_reset_button();
 // s5.reset.initialize_reset_button();
 s6.reset.initialize_reset_button();
