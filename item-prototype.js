@@ -80,14 +80,6 @@ const item_Methods = {
     this.section.selected = false;
   },
 
-  selected_subgrp_cheese_true() {
-    this.section.subgroup_cheese_selected = true;
-  },
-
-  selected_subgrp_cheese_false() {
-    this.section.subgroup_cheese_selected = false;
-  },
-
   count_increment_sect() {
     this.section.count++;
   },
@@ -236,9 +228,24 @@ const item_Methods = {
     this.section.count = this.section.count - this.count;
   },
 
+  /* Item
+      - selected
+      - count
+      - lmt_rcd
+      - display/hide counter
+*/
+  selected_subgroup_cheese_true() {
+    this.section.selected_subgroup_cheese = true;
+  },
+
+  selected_subgroup_cheese_false() {
+    this.section.selected_subgroup_cheese = false;
+  },
+
   drop_item_from_section() {
     this.subtract_item_from_section_count();
     this.lmt_rcd_sect_false();
+
     if (this.section.count == 0) {
       this.selected_sect_false();
     }
@@ -248,17 +255,13 @@ const item_Methods = {
     this.limit_reached_item_false();
     this.enable_unselected_btns();
 
+    if (this.subgroup_cheese) {
+      this.selected_subgroup_cheese_false();
+    }
     if (this.section.selected_subgroup_cheese) {
       this.disable_unselected_cheeses();
     }
   },
-
-  /* Item
-      - selected
-      - count
-      - lmt_rcd
-      - display/hide counter
-*/
 
   add_item() {
     /* First update item */
@@ -276,12 +279,10 @@ const item_Methods = {
       this.disable_unselected_btns();
     }
 
-    /*
     if (this.subgroup_cheese) {
-      this.selected_subgrp_cheese_true();
-      // this.disable_unselected_cheeses();
-      this.log_cheese_status();
-    } */
+      this.selected_subgroup_cheese_true();
+      this.disable_unselected_cheeses();
+    }
   },
 
   select() {
@@ -291,7 +292,7 @@ const item_Methods = {
       this.add_item();
     }
     this.log_combined_item_sect();
-    s3.subgroup_cheese_selected = true;
+    //s3.subgroup_cheese_selected = true;
   },
 };
 /* Item
