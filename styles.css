@@ -40,6 +40,10 @@ h2 {
   margin-left: 5px;
   margin-right: auto;
 }
+.limit {
+  margin: 0;
+}
+
 .reset-div {
   margin-top: 8px;
 }

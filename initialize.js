@@ -84,6 +84,7 @@ s3.item6.button.innerHTML = s3.item6.name;
 s3.item7.button.innerHTML = s3.item7.name;
 s3.item8.button.innerHTML = s3.item8.name;
 s3.item9.button.innerHTML = s3.item9.name;
+s3.item10.button.innerHTML = s3.item10.name;
 
 // s4.item.button.innerHTML = s4.item.name; fruits & veggies
 // s4.item.button.innerHTML = s4.item.name;
@@ -111,8 +112,8 @@ s6.item6.button.innerHTML = s6.item6.name;
 s1.reset.button.innerHTML = s1.reset.name;
 s2.reset.button.innerHTML = s2.reset.name;
 s3.reset.button.innerHTML = s3.reset.name;
-// s4.reset.button.innerHTML = s4.reset.name;
-// s5.reset.button.innerHTML = s5.reset.name;
+// s.reset.button.innerHTML = s.reset.name;
+// s.reset.button.innerHTML = s.reset.name;
 s6.reset.button.innerHTML = s6.reset.name;
 
 /*
