@@ -152,6 +152,7 @@ const item_Methods = {
     this.lmt_rcd_sect_false();
     this.count_zero_sect();
     this.selected_sect_false();
+    this.selected_subgroup_cheese_false();
 
     this.log_all();
   },

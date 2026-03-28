@@ -1,3 +1,11 @@
+
+      <div class="reset-div" >
+        <button id="s3-cheese" class="reset-btn ">
+          test cheese
+        </button>
+      </div>
+
+
   items: [], // [ this.item1, this.item2, this.item3, this.item4, this.item5, this.item6, this.item7, this.item8, ],
 //  LIST ALL ITEMS HERE IN THIS "GET" PROPERTY:
   get items() {
