@@ -14,13 +14,8 @@
   <body>
     <button type="button" onclick="location.reload()">reload</button>
 
-    <button
-      id="menu-reset"
-      type="button"
-      disabled
-      onclick="/*section_methods.reset_all_sections()*/"
-    >
-      reset all
+    <button id="menu-reset-top" class="reset-btn" type="button" disabled>
+      reset menu
     </button>
 
     <!-- START SECTION 1 PROTEINS -->
@@ -87,9 +82,9 @@
     <!-- END HTML SECTION 1 PROTEINS HTML-->
 
     <!--
-// SECTION  1 PROTEINS ////////////////////////
+// SECTION  1 PROTEINS ///////////////
 //////////////////////////////////////
-// SECTION  2   EGGS ////////////////////////
+// SECTION  2   EGGS /////////////////
 -->
     <!-- START SECTION 2 EGGS -->
 
@@ -119,9 +114,9 @@
     </div>
     <!-- END SECTION 2 EGGS  -->
     <!--
-// SECTION  2  EGGS /////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////
-// SECTION  3  DAIRY  /////////////////////////////////////////////////////////////////////////////////////
+// SECTION  2  EGGS ///////////////
+///////////////////////////////////
+// SECTION  3  DAIRY  /////////////
 -->
     <!-- START SECTION 3 DAIRY-->
 
@@ -203,9 +198,9 @@
     </div>
     <!-- END SECTION 3 DAIRY -->
     <!--
-// SECTION 3 /////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////
-// SECTION 4  Fruits + Veggies /////////////////////////////////////////////////////////////////////////////////////
+// SECTION 3 ////////////////////////////
+/////////////////////////////////////////
+// SECTION 4  Fruits + Veggies //////////
 -->
     <!-- START SECTION 4 Fruits + Veggies -->
 
@@ -225,14 +220,14 @@
       <!-- END SECTION  HEADER -->
 
       <div class="item-div">
-        <button id="s4-" class="item-btn">empty section</button>
+        <button id="s4-" class="item-btn" disabled>empty section</button>
         <span id="s4-c" class="counter">0</span>
       </div>
     </div>
     <!-- END SECTION 4 Fruits + Veggies  -->
     <!--
-// SECTION  4  Fruits + Veggies  /////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////
+// SECTION  4  Fruits + Veggies  ////////
+/////////////////////////////////////////
 // SECTION  5 BEANS /////////////////////
    START SECTION  5 BEANS -->
 
@@ -277,8 +272,8 @@
     </div>
     <!-- END SECTION  5 BEANS  -->
     <!--
-// SECTION  5/////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////
+// SECTION  5//////////////////////
+///////////////////////////////////
 // SECTION  6 /////////////////////
      START SECTION 6 -->
 
@@ -346,8 +341,14 @@
         <button id="s6-reset" class="reset-btn">?reset?</button>
       </div>
     </div>
+
+    <div class="reset-div">
+      <button id="menu-reset-bottom" class="reset-btn" type="button" disabled>
+        reset menu
+      </button>
+    </div>
     <!--
-// END SECTION  6 ////////////////////////
+// END SECTION  6 ////////////////////
 //////////////////////////////////////
 //      END   ////////////////////////
 -->
@@ -363,12 +364,16 @@
 
     <script src="section-prototype.js"></script>
     <script src="item-prototype.js"></script>
+    <!--
+    <script src="menu-defin.js"></script>
+    -->
     <script src="s1-defin.js"></script>
     <script src="s2-defin.js"></script>
     <script src="s3-defin.js"></script>
     <script src="s5-defin.js"></script>
     <script src="s6-defin.js"></script>
     <script src="initialize.js"></script>
+    <script src="run-insert-names.js"></script>
 
     <script></script>
   </body>
