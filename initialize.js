@@ -31,10 +31,10 @@ s3.item10.initialize_item_button();
 // s4.item.initialize_item_button();
 // s4.item.initialize_item_button();
 
-// s5.item.initialize_item_button();
-// s5.item.initialize_item_button();
-// s5.item.initialize_item_button();
-// s5.item.initialize_item_button();
+s5.item1.initialize_item_button();
+s5.item2.initialize_item_button();
+s5.item3.initialize_item_button();
+s5.item4.initialize_item_button();
 
 s6.item1.initialize_item_button();
 s6.item2.initialize_item_button();
@@ -48,21 +48,21 @@ s2.reset.initialize_reset_button();
 s3.reset.initialize_reset_button();
 // s3.cheese.initialize_cheese_button();
 // s4.reset.initialize_reset_button();
-// s5.reset.initialize_reset_button();
+s5.reset.initialize_reset_button();
 s6.reset.initialize_reset_button();
 
 s1.title.innerHTML = s1.name;
 s2.title.innerHTML = s2.name;
 s3.title.innerHTML = s3.name;
 // s4.title.innerHTML = s4.name;
-// s5.title.innerHTML = s5.name;
+s5.title.innerHTML = s5.name;
 s6.title.innerHTML = s6.name;
 
 s1.choose.innerHTML = s1.limit;
 s2.choose.innerHTML = s2.limit;
 s3.choose.innerHTML = s3.limit;
 // s4.choose.innerHTML = s4.limit;
-// s5.choose.innerHTML = s5.limit;
+s5.choose.innerHTML = s5.limit;
 s6.choose.innerHTML = s6.limit;
 
 s1.item1.button.innerHTML = s1.item1.name;
@@ -98,10 +98,10 @@ s3.item10.button.innerHTML = s3.item10.name;
 // s4.item.button.innerHTML = s4.item.name;
 // s4.item.button.innerHTML = s4.item.name;
 
-// s5.item1.button.innerHTML = s5.item1.name; beans
-// s5.item2.button.innerHTML = s5.item2.name;
-// s5.item3.button.innerHTML = s5.item3.name;
-// s5.item4.button.innerHTML = s5.item4.name;
+s5.item1.button.innerHTML = s5.item1.name;
+s5.item2.button.innerHTML = s5.item2.name;
+s5.item3.button.innerHTML = s5.item3.name;
+s5.item4.button.innerHTML = s5.item4.name;
 
 s6.item1.button.innerHTML = s6.item1.name;
 s6.item2.button.innerHTML = s6.item2.name;
@@ -114,7 +114,7 @@ s1.reset.button.innerHTML = s1.reset.name;
 s2.reset.button.innerHTML = s2.reset.name;
 s3.reset.button.innerHTML = s3.reset.name;
 // s.reset.button.innerHTML = s.reset.name;
-// s.reset.button.innerHTML = s.reset.name;
+s5.reset.button.innerHTML = s5.reset.name;
 s6.reset.button.innerHTML = s6.reset.name;
 
 /*

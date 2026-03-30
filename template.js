@@ -38,27 +38,19 @@
 "use strict";
 
 const s = {
-  name: null,
-  abbr: null,
+  name: false,
+  section_abbr: false,
   selected: false,
   count: 0,
-  limit_reached: false,
   limit: false,
+  limit_reached: false,
 
   title: document.querySelector("#s-title"),
   choose: document.querySelector("#s-choose-amount"),
-  // counter : document.querySelector('#s1c'),
-  __proto__: section_Methods,
+
   get items() {
     return [
       this.item1,
-      this.item2,
-      this.item3,
-      this.item4,
-      this.item5,
-      this.item6,
-      this.item7,
-      this.item8,
     ];
   },
 
@@ -73,10 +65,11 @@ const s = {
 
   item: {
     name: null,
-    selected: false,
     count: 0,
-    limit_reached: false,
     limit: false,
+    selected: false,
+    limit_reached: false,
+
     button: document.querySelector("#s-"),
     counter: document.querySelector("#s-c"),
      __proto__: item_Methods,
@@ -84,4 +77,5 @@ const s = {
       return s;
     },
   },
+
 };
