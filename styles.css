@@ -32,9 +32,14 @@ body {
 h2 {
   font-size: 1.2rem; /* Or use other units like em, rem, or % */
 }
+
+.menu-title {
+  font-size: 24px;
+}
 .section-title {
   display: inline-block;
 }
+
 .limit-within-section {
   width: 168px;
   margin-left: 5px;

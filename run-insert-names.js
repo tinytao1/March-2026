@@ -1,3 +1,5 @@
+menu.title.innerHTML = menu.name;
+
 s1.title.innerHTML = s1.name;
 s2.title.innerHTML = s2.name;
 s3.title.innerHTML = s3.name;
@@ -34,6 +36,7 @@ s3.item8.button.innerHTML = s3.item8.name;
 s3.item9.button.innerHTML = s3.item9.name;
 s3.item10.button.innerHTML = s3.item10.name;
 
+document.querySelector("#s4-choose").style.display = "none";
 // s4.item.button.innerHTML = s4.item.name; fruits & veggies
 // s4.item.button.innerHTML = s4.item.name;
 // s4.item.button.innerHTML = s4.item.name;

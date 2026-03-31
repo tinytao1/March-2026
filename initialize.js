@@ -1,4 +1,5 @@
-// menu.reset.initialize_reset_menu_button();
+menu.reset.initialize_menu_reset_button_top();
+menu.reset.initialize_menu_reset_button_bottom();
 s1.reset.initialize_reset_button();
 
 s1.item1.initialize_item_button();

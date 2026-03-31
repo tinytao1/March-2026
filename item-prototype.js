@@ -7,12 +7,6 @@ const item_Methods = {
     this.button.addEventListener("click", () => this.reset_sect());
   },
 
-  initialize_reset_menu_button() {
-    this.button_top.addEventListener("click", () =>
-      alert("inside item_prototype"),
-    ); // this.reset_sect1());
-  },
-
   initialize_cheese_button() {
     this.button.addEventListener("click", () => this.log_cheese_status());
   },
