@@ -13,6 +13,7 @@ button {
   border-bottom-width: 1.25px;  padding: 5px;
   border-bottom-color: rgba(102, 153, 255, 0); /* blue; */
   background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 7px;
 }
 
 button:hover {
