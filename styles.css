@@ -1,6 +1,23 @@
 body {
   background-color: tan; /* #ffb699;  cadetblue;  slategray;  wheat;  dimgrey; */
 }
+
+button {
+  cursor: pointer;
+  color : rgb(0,0,0);
+  font-size: 16px;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  border: none; 
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+button:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 1.25px;
+  border-bottom-color: rgb(102, 153, 255); /* blue; */
+}
+
 .item-div {
   margin-bottom: 4px;
 }
