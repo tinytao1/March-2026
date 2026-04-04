@@ -7,7 +7,7 @@ button {
   color : rgb(0,0,0);
   font-size: 16px;
   font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-  text-align: right;
+  text-align: left;
   border : 1.25px solid rgba(0,0,0,0);
   border-bottom-style: solid;
   border-bottom-width: 1.25px;  padding: 5px;
@@ -27,12 +27,9 @@ button:hover {
 }
 .item-btn {
   margin-right: 5px;
-  padding: 2px 5px;
   cursor: pointer;
-  min-width: 180px; /*
-            border:1px solid rgb(143,143,157); border-radius: 9999px;
-            background-color: rgb(233,233,237); */
 }
+
 .item-btn.fruits_veg {
   min-width: 25px;
 }
