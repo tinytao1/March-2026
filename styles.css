@@ -52,7 +52,6 @@ button:focus {
 }
 .item-btn {
   margin-right: 5px;
-  cursor: pointer;
 }
 
 .item-btn.fruits_veg {
