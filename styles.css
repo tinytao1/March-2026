@@ -2,25 +2,50 @@ body {
   background-color: tan; /* #ffb699;  cadetblue;  slategray;  wheat;  dimgrey; */
 }
 
-button {
+button { 
+  /* Resetting, "clean slate" Resetting, clear out... */
+  border: none;
+  outline: none;
   cursor: pointer;
+  /* Base State, The core look (box model) */
+  background-color: rgba(0,0,0, 0.0); /*transparent black*/
   color : rgb(0,0,0);
+  padding: 5px;
+  display: inline-block;
+  /*styling the text*/
+  font-family: Ariel, sans-serif;
   font-size: 16px;
-  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  /*font-weight:;*/
   text-align: left;
-  border : 1.25px solid rgba(0,0,0,0);
-  border-bottom-style: solid;
-  border-bottom-width: 1.25px;  padding: 5px;
-  border-bottom-color: rgba(102, 153, 255, 0); /* blue; */
-  background-color: rgba(255, 255, 255, 0);
-  margin-bottom: 7px;
+  transition: all 0.1s ease; /*makes changes smooth*/
+  
+  border : 1px solid rgba(0,0,0,0); /*transparent black*/
+  border-radius: 2px; 
+  border-bottom-width: 2px;  
+  border-bottom-color: rgba(102, 153, 255, 0); /* transparent blue */
+
+  margin-bottom:7px;
 }
 
 button:hover {
-  border-bottom-style: solid;
-  border-bottom-width: 1.25px;
-  border-bottom-color: rgb(102, 153, 255); /* blue; */
+  color : rgb(0,0,0,0.90);
+  background-color: rgb(0,0,0,0.035);
+  border-bottom-color: rgb(72, 123, 255); /* darker blue; */
 }
+
+button:focus {
+  outline: 3px solid rgb(0,0,0,0.27);
+  border-bottom-color: rgb(72, 123, 255); /* darker blue; */
+  background-color: rgb(0,0,0,0.05);
+}
+
+/*
+.my-menu-btn:selected { /*for JavaScript
+  border-bottom-color: rgb(72, 123, 255); /* blue; 
+  background-color: rgba(255, 255, 255, 0.15);
+}
+*/
+
 
 .item-div {
   margin-bottom: 4px;
