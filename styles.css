@@ -11,7 +11,7 @@ button {
   background-color: rgba(0,0,0, 0.0); /*transparent black*/
   color : rgb(0,0,0);
   padding: 5px;
-  display: inline-block;
+  display: block;
   /*styling the text*/
   font-family: Ariel, sans-serif;
   font-size: 16px;
